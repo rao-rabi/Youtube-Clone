@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Youtube</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-md position-sticky top-0 pt-1 z-2 bg-white">
+        <div class="container-fluid">
+            <div class="d-flex ms-lg-5">
+                <img class="object-fit-contain" width="40px" src="Assets/youtube.png" alt="">
+                <p class="fw-bold fs-5 pt-3">YouTube</p>
+            </div>
+            <div class="d-lg-flex gap-3 d-none">
+                <form class="d-lg-flex" role="search">
+                    <input class="form-control rounded-0 border-secondary" style="width: 30vw;" type="search"
+                        placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-secondary ms-0 rounded-0 ps-4 pe-4" type="submit"><i
+                            class="bi bi-search"></i></button>
+                </form>
+                <div class="mt-2">
+                    <i class="bi bi-mic-fill p-3 rounded-circle bg-body-secondary"></i>
+                </div>
+            </div>
+            <div class="d-flex">
+                <i class="bi bi-grid-3x3-gap-fill fs-5 me-2"></i>
+                <div class="dropstart">
+                    <div data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-three-dots-vertical fs-5 me-2"></i></i>
+                    </div>
+                    <ul class="dropdown-menu mt-5 border border-danger border-2 rounded-0 p-2">
+                        <li><a class="dropdown-item ps-0" href="#">Your Data</a></li>
+                        <hr>
+                        <li><a class="dropdown-item ps-0" href="#">Settings</a></li>
+                        <hr>
+                        <li><a class="dropdown-item ps-0" href="#">Languages</a></li>
+                        <hr>
+                        <li><a class="dropdown-item ps-0" href="#">My Account</a></li>
+                        <hr>
+                        <li><a class="dropdown-item ps-0" href="#">FAQ</a></li>
+                        <hr>
+                        <li><a class="dropdown-item ps-0" href="#">Error</a></li>
+                    </ul>
+                </div>
+                <!-- <i class="bi bi-three-dots-vertical fs-5 me-2"></i> -->
+                <button type="button" class="btn btn-outline-primary rounded-0 me-lg-3"><i
+                        class="bi bi-person-circle pe-2"></i><span>SIGN IN</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-2 col-12 bottom-0" style="z-index: 1000;">
+                <input type="checkbox" class="d-none" id="openSidebarMenu">
+                <label for="openSidebarMenu" class="sidebarIConToggler d-lg-block d-none">
+                    <i class="bi bi-list fs-3"></i>
+                </label>
+                <!-- sidebar-menu -->
+                <div id="sidebarMenu">
+                    <ul class="menu ps-0 navbar-nav d-lg-block d-flex flex-row bg-white">
+                        <li class="bg-body-secondary"><i class="bi bi-house-door-fill fs-5"></i>Home</li>
+                        <li><i class="bi bi-compass fs-5"></i>Explore</li>
+                        <li><img class="object-fit-contain" width="20px" src="Assets/youtube-shorts-logo-15252.png"
+                                alt="">Shorts</li>
+                        <li class="d-lg-flex d-none"><i class="bi bi-collection-play fs-5"></i>Subscription</li>
+                        <div class="d-lg-block d-none">
+                            <hr>
+                            <li><img class="object-fit-contain" width="25px"
+                                    src="Assets/vecteezy_simple-video-library-icon-sign-design_9992297_972.png"
+                                    alt="">Library</li>
+                            <li><i class="bi bi-clock-history fs-5"></i>History</li>
+                            <hr>
+                            <li class="ps-1">
+                                <p class="flex-wrap mb-1 signup">Sign in to like videos,<br> comment, and subscribe.</p>
+                            </li>
+                            <li> <button type="button" class="btn btn-outline-primary rounded-0 me-3 mt-0 signup"><i
+                                        class="bi bi-person-circle pe-2"></i><span>SIGN IN</span>
+                                </button>
+                            </li>
+                            <hr class="signup">
+                            <li>
+                                <p class="fw-bold lead text-center ">Best of Youtube</p>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-music bg-black p-2 rounded-circle small"
+                                    style="color: #ffffff;"></i>Music
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-trophy bg-black p-2 rounded-circle small"
+                                    style="color: #ffffff;"></i>Sports
+                            </li>
+                            <li><i class="bi bi-controller fs-5 bg-black ps-1 pe-1 text-white rounded-circle"></i>Gaming
+                            </li>
+                            <li><i class="fa-solid fa-ticket-simple bg-black p-2 rounded-circle small"
+                                    style="color: #ffffff;"></i>Movies</li>
+                            <li><i class="fa-solid fa-newspaper bg-black p-2 rounded-circle small"
+                                    style="color: #fcfcfc;"></i>News</li>
+                            <li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-10 col-12 ps-0 m-lg-0 m-2">
+                <div class="mt-2 d-lg-block d-none">
+                     <!-- buttons -->
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active flex-nowrap">
+                                <button
+                                    class="btn btn-outline-secondary me-2 bg-black rounded-pill ps-3 pe-3 text-white"
+                                    type="button">All</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Deep House</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Playlists</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Chill-out music</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Live</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Acouistic guitar</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Music</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Brazillian Music</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Arrocha</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">History</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Comedy</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Chill-out music</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Live</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Acouistic guitar</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Music</button>
+                            </div>
+                            <div class="carousel-item">
+                                <button
+                                    class="btn btn-outline-secondary me-2 bg-black rounded-pill ps-3 pe-3 text-white"
+                                    type="button">All</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Deep House</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Playlists</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Chill-out music</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Live</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Acouistic guitar</button>
+                                <button
+                                    class="btn btn-outline-secondary bg-body-secondary rounded-pill ps-3 pe-3 text-black"
+                                    type="button">Music</button>
+                            </div>
+                        </div>
+                        <div class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
+                            <i class="bi bi-chevron-right text-black fw-bold p-2 bg-white rounded-circle"></i>
+                            <span class="visually-hidden">Next</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid mt-5">
+                    <!-- videos -->
+                    <div
+                        class="row gy-4 row-cols-xl-4 row-cols-lg-3 row-cols-md-2 row-cols-1 justify-content-center flex-wrap gx-4">
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/CpgNVyUxUV0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="Assets/abstract-coding-wallpaper-glowing-numbers-binary-code-computing-concept-d-rendering-155772299.jpg"
+                                            alt="">
+                                        <div class="ms-2">
+                                            <p>How To Make A Responsive Coffee Shop Website Design Using
+                                                HTML -
+                                                CSS - JavaScript</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Fox News<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>942 Watching</small>
+                                            </div>
+                                            <button type="button"
+                                                class="btn btn-outline-danger rounded-0 mt-0 ps-1 pe-1 p-0"><small>LIVE
+                                                    NOW</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" height="200"
+                                        src="https://www.youtube.com/embed/fS9GVfJmKRQ" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50" src="Assets/t-series.jpg"
+                                            alt="">
+                                        <div class="ms-2">
+                                            <p>Padmaavat: Nainowale Ne Lyrical Video Song | Deepika
+                                                Padukone |
+                                                Shahid Kapoor | Ranveer Singh</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>T-series<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/SxqF9Rc6E-E"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="Assets/channels4_profile.jpg" alt="">
+                                        <div class="ms-2">
+                                            <p>Khabarhar with Imran Khan | Eid Special | Aftab Iqbal | 22
+                                                April
+                                                2023 | GWAI | Watch Now</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Aftab Iqbal<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/yPuP5Wbvh9s"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="/Assets/fluc academy.jpg" alt="">
+                                        <div class="ms-2">
+                                            <p>Best 6 Ai Tools For Designers | 22 April 2023 | FLUX | Watch
+                                                Now |Best Ever tools you will See
+                                            </p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Flux Academy<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/CpgNVyUxUV0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="Assets/abstract-coding-wallpaper-glowing-numbers-binary-code-computing-concept-d-rendering-155772299.jpg"
+                                            alt="">
+                                        <div class="ms-2">
+                                            <p>How To Make A Responsive Coffee Shop Website Design Using
+                                                HTML -
+                                                CSS - JavaScript</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Fox News<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>942 Watching</small>
+                                            </div>
+                                            <button type="button"
+                                                class="btn btn-outline-danger rounded-0 mt-0 ps-1 pe-1 p-0"><small>LIVE
+                                                    NOW</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" height="200"
+                                        src="https://www.youtube.com/embed/fS9GVfJmKRQ" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50" src="Assets/t-series.jpg"
+                                            alt="">
+                                        <div class="ms-2">
+                                            <p>Padmaavat: Nainowale Ne Lyrical Video Song | Deepika
+                                                Padukone |
+                                                Shahid Kapoor | Ranveer Singh</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>T-series<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/SxqF9Rc6E-E"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="Assets/channels4_profile.jpg" alt="">
+                                        <div class="ms-2">
+                                            <p>Khabarhar with Imran Khan | Eid Special | Aftab Iqbal | 22
+                                                April
+                                                2023 | GWAI | Watch Now</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Aftab Iqbal<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/yPuP5Wbvh9s"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="/Assets/fluc academy.jpg" alt="">
+                                        <div class="ms-2">
+                                            <p>Best 6 Ai Tools For Designers | 22 April 2023 | FLUX | Watch
+                                                Now |Best Ever tools you will See
+                                            </p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Flux Academy<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/CpgNVyUxUV0"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="Assets/abstract-coding-wallpaper-glowing-numbers-binary-code-computing-concept-d-rendering-155772299.jpg"
+                                            alt="">
+                                        <div class="ms-2">
+                                            <p>How To Make A Responsive Coffee Shop Website Design Using
+                                                HTML -
+                                                CSS - JavaScript</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Fox News<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>942 Watching</small>
+                                            </div>
+                                            <button type="button"
+                                                class="btn btn-outline-danger rounded-0 mt-0 ps-1 pe-1 p-0"><small>LIVE
+                                                    NOW</small>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" height="200"
+                                        src="https://www.youtube.com/embed/fS9GVfJmKRQ" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50" src="Assets/t-series.jpg"
+                                            alt="">
+                                        <div class="ms-2">
+                                            <p>Padmaavat: Nainowale Ne Lyrical Video Song | Deepika
+                                                Padukone |
+                                                Shahid Kapoor | Ranveer Singh</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>T-series<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/SxqF9Rc6E-E"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="Assets/channels4_profile.jpg" alt="">
+                                        <div class="ms-2">
+                                            <p>Khabarhar with Imran Khan | Eid Special | Aftab Iqbal | 22
+                                                April
+                                                2023 | GWAI | Watch Now</p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Aftab Iqbal<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card border-0">
+                                <div class="card-title mb-0 pb-0">
+                                    <iframe class="w-100" height="200" src="https://www.youtube.com/embed/yPuP5Wbvh9s"
+                                        title="YouTube video player" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <div class="card-body mt-2 pt-0 ps-0">
+                                    <div class="d-flex justify-content-center">
+                                        <img class="rounded-circle" width="50" height="50"
+                                            src="/Assets/fluc academy.jpg" alt="">
+                                        <div class="ms-2">
+                                            <p>Best 6 Ai Tools For Designers | 22 April 2023 | FLUX | Watch
+                                                Now |Best Ever tools you will See
+                                            </p>
+                                            <div class="d-flex flex-column text-black-50">
+                                                <small>Flux Academy<i class="bi bi-check-circle-fill ms-1"></i></small>
+                                                <small>9M Views - 3 months ago</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Condensed&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
+  box-sizing: border-box;
+}
+body{
+    overflow-x: hidden !important;
+}
+/* navbar */
+
+.navbar{
+    box-shadow: 4px 8px 30px rgba(243, 243, 243, 0.5);
+}
+
+/* sidebar */
+
+.menu {
+    height: 10%;
+    bottom: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12%;
+    z-index: 2;
+    position: fixed;
+    width: 100vw;
+  }
+  @media only screen and (min-width: 992px) {
+    #sidebarMenu{
+        left: 0;
+        top: 0;
+        position:fixed;
+        margin-top: 85px;
+        transform: translateX(0px);
+    }
+    .menu li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .menu li:hover{
+        background-color: rgba(224, 224, 224,0.7);
+    }
+    .menu .signup{
+        display: none;
+    }
+    .menu li .signup{
+        display: none;
+    }
+    #openSidebarMenu:checked ~ #sidebarMenu{
+        transform: translateX(0px);
+
+    }
+    #openSidebarMenu:checked ~ #sidebarMenu .menu{
+        height: 100%;
+        bottom: 0;
+        display: block;
+        width: 15vw;
+    }
+    #openSidebarMenu:checked ~ #sidebarMenu ul li{
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 10px;
+        gap: 20px;
+        justify-content: flex-start;
+        padding-left: 10% !important;
+    }
+    #openSidebarMenu:checked ~ #sidebarMenu ul li .signup{
+        display: flex;
+    }
+    #openSidebarMenu:checked ~ #sidebarMenu ul .signup{
+        display: flex;
+    }
+    .sidebarIConToggler{
+        position: absolute ;
+        top: 15px;
+        left: 24px;
+        z-index: 100;
+        position: fixed;
+    }
+    .menu {
+        height: 100%;
+        bottom: 0;
+        display: block;
+        width: 8vw;
+    }
+  }
+  
